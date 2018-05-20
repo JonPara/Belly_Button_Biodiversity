@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Belly Button Biodiversity</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="static/styles/style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron text-center">
+            <h1>Belly Button Biodiversity Dashboard</h1>
+            <p>Use the interactive charts below to explore the dataset.</p>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 col-s-2 col-md-2">
+                <div class="panel panel-default responsive">
+                    <div class="panel-heading">
+                        <h3>Sample the Dataset</h3>
+                    </div>
+                    <div class="panel-body">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <select id="sample_dataset" onchange="optionChanged(this.value)"></select>
+                        </button>
+                    </div>
+
+                    <div id="meta_data" class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3>Sample the Metadata</h3>
+                        </div>
+                        <div class="panel-body"></div>
+                        <table class="table">
+                         <tbody></tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xs-5 col-s-5 col-md-5">
+                <div id="pie"></div>
+            </div>
+            <div class="col-xs-4 col-s-4 col-md-4">
+                <h3>Belly Button Washing Frequency</h3>
+                <div id="gauge"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10">
+                <h3>Interactive Bubble Chart</h3>
+                <div id="scatter"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.3/d3.min.js"></script>
+    <script type="text/javascript" src="static/app.js"></script>
+</body>
+
+</html>
